@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&family=Dela+Gothic+One&family=Gabarito:wght@400;500;900&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Libre+Bodoni&family=Montserrat:wght@400;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,700;0,800;0,900;1,900&family=Orelega+One&family=Outfit:wght@100;200;300;400;500;700;800;900&family=Oxygen&family=Pacifico&family=Pixelify+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,800;1,400;1,500;1,800&family=Poppins:wght@200;500;800;900&family=Prompt:wght@200;300;500;600;700;800;900&family=Rakkas&family=Roboto&family=Sacramento&family=Sono:wght@600&family=Yatra+One&family=Young+Serif&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>.
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: fit-content; 
+            position: absolute;           
+            top: 0;
+        }
+        header nav{
+            width: 100%;
+            height: 40px;
+            background-color:#1D1FB8;
+            text-align: center;
+            color: aliceblue;
+            font-family: "prompt";
+            font-size: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .navBar-div{
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            animation: navBar 3s 3s linear forwards 4;
+            transition: 3s;
+        }
+        @keyframes navBar {
+            0%{
+                top: 20%;
+            }
+            20%{
+                top: -90%;
+            }
+            40%{
+                top: -90%;
+            }
+            60%{
+                top: -90%;
+            }
+            80%{
+                top: -90%;
+            }
+            100%{
+                top: 20%;
+            }
+        }
+        .title{
+            width:49%;
+            padding:2.5%;
+            height:fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        .title h1{
+            font-family: "josefin sans";
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .title p{
+            font-family: Outfit;
+            margin: 0 5px;
+        }
+        @media (max-width:800px) {
+            .title{
+                width: 90%;
+                margin:0 5%;
+                margin: 5% 0;
+            }
+            .title h1{
+                font-size: 20px;
+            }   
+            .title p{
+                font-size: 12px;
+            }
+            .game-title{
+                margin:5px ;
+            }
+            .game-title h1{
+                font-size: 18px;
+            }
+            .game-title p{
+                font-size: 5px;
+                margin: 0;
+            }
+            .score nav{
+                font-size: 10px;
+            }
+            .score nav pre{
+                font-size: 10px;
+            }
+            #player{
+                width: 50px;
+                height: 50px;
+            }
+            #blockIMG{
+                width: 50px;
+                height: 50px;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><div class="navBar-div"><p>Thunder Clothes</p> <br><p>Coming Soon</p></div></nav>
+    </header>
+    <main>
+
+
+        <!-- thunder Game -->
+        <div class="game-container">
+            <div class="thunderGame">
+                <div class="game-title">
+                    <h1>Thunder Game</h1>
+                    <p>Thunder Website is Coming Soon</p>
+                </div>
+                <div class="score">
+                    <nav class="max-socre"><p id="maxScore">000</p><pre>  PT</pre><pre>  <b>Max Score</b></pre></nav>
+                    <nav class="current-score"><p id="currentScore">000</p><pre>  PT</pre><pre>  <b>Score :</b></pre></nav>
+                </div>
+                <div class="gray-background" id="gray-background">
+                    <h1 id="play">Click to Start</h1>
+                </div>
+                <img src="images/game-background2.jpg" alt="game background" class="game-background" id="gameBackground">
+                <div class="play-ground">
+                    <img src="images/charachter.png" id="player">
+                    <nav id="Rocket"><img src="images/rocket.png" id="rocketImg"></nav>
+                    <div id="block"><img src="images/block.png" id="blockIMG"></div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+
+
+
+        <div class="title">
+            <h1 class="header-title">Thunder Website is Coming Soon</h1>
+            <p>Thunder Clothes Selling artistic products</p>
+        </div>
+
+        
+    </main>
+
+
+    <audio src="images/GameOver.mp3" id="GameOver"></audio>
+    <audio src="images/GameSong.mp3" id="GameSong1"></audio>
+    <script src="game.js"></script>
+</body>
+</html>

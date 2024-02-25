@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-container{
+    width:100%;
+    height: fit-content;
+    margin: 5% 2.5%;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.thunderGame{
+    width:50%;
+    height:300px;
+    /* border-bottom: 2px solid gray;
+    border-left: 2px solid gray; */
+    /* border: 1px solid black; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+@media (max-width:700px){
+    .thunderGame{
+        width: 90%;
+        height:200px;
+    }
+    .game-container{
+        justify-content: center;
+        margin-top: 15%;
+    }
+}
+.game-background{
+    position: absolute;
+    top: 00px;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    z-index: -1;
+    transition: 1.5s;
+}
+/* score */
+.score{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    float: right;
+    margin: 10px;
+}
+.score nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pixelify Sans";
+    font-size: 13px;
+    color: #f1fbf1;
+}
+.score nav pre{
+    font-family: "Pixelify Sans";
+    font-size: 13px;
+    color: #f1fbf1;
+}
+.game-title{
+    width: fit-content;
+    position: absolute;
+    padding: 0px 10px;
+    font-family:"Pixelify Sans";
+    color: #f1fbf1;
+}
+.game-title p{
+    font-family: prompt;
+    font-size: 10px;
+    margin: 0 10px;
+}
+.play-ground{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.gray-background{
+    width: 100%;
+    height: 100%;
+    background-color: #0000004c;
+    position: absolute;
+    z-index: 80;
+}
+/* the player */
+#player{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    margin: 0;
+}
+.animation{
+    animation: jump 500ms forwards;
+}
+#Rocket{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#rocketImg{
+    width: 60px;
+    height: 60px;    
+    transform: rotate(90deg);
+    right: -100px;
+    position: absolute;
+    /* animation:infinite linear;
+    animation-name: anim;
+    animation-duration: 5000ms; */
+    
+}
+
+/* animation class */
+.rocketshout{
+    animation: anim infinite linear ;
+    animation-duration: 2000ms;
+}
+
+/*  */
+#block{
+    position: absolute;
+    width: 100%;
+    height:70px;
+    display: flex;
+    align-items: start;
+    bottom: -2px;
+    right:0;
+}
+#blockIMG{
+    width: auto;
+    height: 70px;
+    position: absolute;
+    right: -100px;
+}
+.blocksAnimation{
+    animation:infinite linear;
+    animation-name: anim;
+    animation-duration: 3000ms;
+    /* animation-delay: 3000ms; */
+}
+#play{
+    font-size: 40px;
+    font-family: "josefin sans";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #f1fbf1;
+    z-index: 99;
+    animation: floating 1s linear infinite;
+    cursor: pointer;
+    text-align: center;
+}
+.jump-animation{
+    animation: jump 500ms forwards;
+}
+.jump-animation-mobile{
+    animation: jumpMobile 500ms forwards;
+}
+@keyframes jump {
+    0%{
+        bottom:0px;
+    }
+    40%{
+        bottom: 100px;
+    }
+    60%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+@keyframes jumpMobile {
+    0%{
+        bottom:0px;
+    }
+    40%{
+        bottom: 90px;
+    }
+    60%{
+        bottom: 90px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+@keyframes anim {
+    0%{
+        right: 0;
+    }
+    100%{
+        right:140%;
+    }
+}
+@keyframes floating {
+    0%{
+        transform: translate(-50% , -60%);
+    }
+    50%{
+        transform: translate(-50% , -40%);
+    }
+    100%{
+        transform: translate(-50% , -60%);
+    }
+
+}
+@keyframes shout {
+    0%{
+        right: 0%;
+    }
+    50%{
+        right: 50%;
+    }
+    100%{
+        right:100%;
+    }
+}
