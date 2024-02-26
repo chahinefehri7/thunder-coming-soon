@@ -291,15 +291,30 @@
                 bottom: 0;
             }
         }
+        .aboutus{
+            font-family: "josefin sans";
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #212121;
+            transition: 0.7s;
+        }
+        .aboutus:hover{
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav><div class="navBar-div"><p>Thunder Clothes</p> <br><p>Coming Soon</p></div></nav>
     </header>
-    <main>
-
-
+    <div id="loadingScreen">
+        <div>
+            <img src="images/logo.png" alt="">
+            <nav><p id="l1">S</p><p id="l2">e</p><p id="l3">l</p><p id="l4">l</p><p id="l5">i</p><p id="l6">n</p><p id="l7">g</p><p id="l8">A</p><p id="l9">r</p><p id="l10">t</p><p id="l11">i</p><p id="l12">s</p><p id="l13">t</p><p id="l14">i</p><p id="l15">c</p><p id="l16">P</p><p id="l17">r</p><p id="l18">o</p><p id="l19">d</p><p id="l20">u</p><p id="l21">c</p><p id="l22">t</p><p id="l23">s</p></h1></nav>
+        </div>
+    </div>
+    <main id="content">
         <!-- thunder Game -->
         <div class="game-container">
             <div class="thunderGame">
@@ -421,7 +436,7 @@
                     </nav>
                 </div>
                 <a href="aboutus.html"><img src="images/logo.png" alt="logo" id="logo" class="hidden" style="width: 50px; height: 50px; margin: 100px 0;"></a>
-                <a href="aboutus.html"><h2>click here <br> and know more about us</h2></a>
+                <a href="aboutus.html" class="aboutus"><h2>click here <br> and know more about us</h2></a>
                 
                 
             </div>

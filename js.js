@@ -54,3 +54,9 @@ hiddenElements4.forEach((el) => observer4.observe(el));
 
 
 
+var i=1;
+var j=1;
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide the loader and show the content
+    document.getElementById("loadingScreen").style.display = "none";
+});
