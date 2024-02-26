@@ -9,6 +9,7 @@ var grayBackground = document.getElementById('gray-background');
 var gameBackground = document.getElementById('gameBackground');
 var GameSong1 = document.getElementById('GameSong1');
 var GameOverSound = document.getElementById('GameOver');
+var YourAreDeadMsg = document.getElementById('YourAreDeadMsg');
 
 // changing the block image counter
 var changeBlock = 0;
@@ -38,6 +39,8 @@ function theBlockAnimation(){
 
 play.addEventListener('click' , function(){
 
+    // game over Message
+    YourAreDeadMsg.style.display="unset";
     // playing the song
     GameSong1.play();
     // starting the game
@@ -136,15 +139,14 @@ play.addEventListener('click' , function(){
             rocket.style.display="none";
             currentScore.innerText="00";
             scoreCounter=0;
-            GameSong1.pause();
-            GameSong1.currentTime = 0;
-            GameOverSound.play();
             clearInterval(gamescore);
             clearInterval(blockAnimation);
             clearInterval(checkDead);
-            // starting the game
             grayBackground.style.display="unset"
-            player.src = "images/charachter2.png";               
+            player.src = "images/charachter2.png"; 
+            GameSong1.pause();
+            GameSong1.currentTime = 0;
+            GameOverSound.play();              
         }
 },1);
 

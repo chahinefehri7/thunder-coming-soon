@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display&family=Dela+Gothic+One&family=Gabarito:wght@400;500;900&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Libre+Bodoni&family=Montserrat:wght@400;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,700;0,800;0,900;1,900&family=Orelega+One&family=Outfit:wght@100;200;300;400;500;700;800;900&family=Oxygen&family=Pacifico&family=Pixelify+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,800;1,400;1,500;1,800&family=Poppins:wght@200;500;800;900&family=Prompt:wght@200;300;500;600;700;800;900&family=Roboto&family=Sacramento&family=Sono:wght@400;500&family=Young+Serif&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            width: 90%;
+            padding: 0 5%;
+        }
+        .title{
+            width: 100%;
+            height: fit-content;
+            margin: 8% 0;
+        }
+        .title h1{
+            font-family: 'Gabarito';
+            font-size: 80px;
+        }
+        .title p{
+            font-family: 'prompt';
+            font-weight: lighter;
+        }
+        h2{
+            font-family: 'Josefin Sans';
+            margin: 0;
+            margin: 10px 0;
+        }
+        .text{
+            width: 95%;
+            font-family: 'Gabarito';
+            margin: 20px 0;
+            font-weight: lighter;
+            color: lightgray;
+            transition: 0.5s;
+        }
+        .text:hover{
+            color: black;
+        }
+        .teamNames{
+            margin: 30px 20px;
+            font-family: prompt;
+            font-weight: lighter;
+            list-style-type:circle;
+        }
+        .images img:nth-child(2){
+            float: right;
+            margin-top: -100px;
+        }
+        .images img:nth-child(3){
+            margin-top: -100px;
+        }
+        .images img:nth-child(4){
+            float: right;
+            margin-top: -100px;
+        }
+        .images img:nth-child(5){
+            margin-top: -100px;
+        }
+        /* hover */
+        .images img:nth-child(1):hover{
+            position: relative;
+            z-index: 99;
+            transform: scale(1.05);
+        }
+        .images img:nth-child(2):hover{
+            position: relative;
+            z-index: 99;
+            transform: scale(1.05);
+        }
+        .images img:nth-child(3):hover{
+            position: relative;
+            z-index: 99;
+            transform: scale(1.05);
+        }
+        .images img:nth-child(4):hover{
+            position: relative;
+            z-index: 99;
+            transform: scale(1.05);
+        }
+        .images img:nth-child(5):hover{
+            position: relative;
+            z-index: 99;
+            transform: scale(1.05);
+        }
+        .images img{
+            width: 600px;
+            height: 400px;
+            margin-top: 50px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #moreOptions{
+            width: 30px;
+            height: 30px;
+            margin: 0 0 0 20px;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        #moreOptions-container{
+            width:90%;
+            height: 90vh;
+            padding: 5vh 5%;
+            position: fixed;
+            top: 0;
+            right: -100% ;
+            background-color: aliceblue;
+            z-index: 99;
+            transition: 0.7s;
+        }
+        #moreOptions-container a{
+            color: #212121;
+            text-decoration: none;
+        }
+        #moreOptions-container h1{
+            font-family: 'Gabarito';
+            font-size: 50px;
+        }
+        #moreOptions-container ul{
+            list-style: none;
+            font-family: prompt;
+            font-size: 20px;
+            width: 100%;
+        }
+        #moreOptions-container ul li{
+            padding:10px 0;
+            margin: 5px 0;
+        }
+        .header2-nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header2-nav img{
+            width: 25px;
+            height: 25px;
+        }
+        .socialmedia{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .socialmedia img{
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            transition: 0.5ms;
+        }
+        .socialmedia img:hover{
+            transform: translateY(-1px);
+        }
+        form{
+            width: 100%;
+            height: fit-content;
+        }
+        .contact-form{
+            width: 100%;
+            height: fit-content;
+            padding:0 0 50px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input{
+            width: 90%;
+            padding: 20px 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #F1F1F1;
+            margin: 4px 0;
+            outline: none;
+            font-family: 'outfit';
+            font-weight: 300;
+        }
+        .contact-form textarea{
+            width: 90%;
+            min-width: 90%;
+            max-width: 90%;
+            height: 150px;
+            max-height: 150px;
+            min-height: 150px;
+            padding: 20px 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #F1F1F1;
+            outline: none;
+            font-family: 'outfit';
+        }
+        .contact-us-btn{
+            padding: 15px 20px;
+            width: 90px;
+            height: fit-content;
+            background-color: #1D1FB8;
+            color: #FAFDFF;
+            font-family: 'prompt';
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (min-width:1000px) {
+            .contact-form{
+                align-items: start;
+            }
+            .contact-form textarea{
+                width: 50%;
+                min-width: 50%;
+                max-width: 50%;
+                min-height: 150px;
+            }
+            .input{
+                width: 40%;
+            }
+        }
+        @media (max-width:550px) {
+            #moreOptions{
+                visibility: visible;
+            }
+            .images{
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: center;
+                padding: 20px 0;
+            }
+            .images img{
+                width: 100%;
+                margin:0 0 40% 0;
+            }
+        }
+        ul{
+            width: 95%;
+            margin: 0 2.5%;
+        }
+        ul li{
+            text-align: start;
+        }
+        header nav{
+            width: 100%;
+            height: 40px;
+            background-color:#1D1FB8;
+            text-align: center;
+            color: aliceblue;
+            font-family: "prompt";
+            font-size: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .navBar-div{
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            animation: navBar 3s 3s linear forwards 4;
+            transition: 3s;
+        }
+        @keyframes navBar {
+            0%{
+                top: 20%;
+            }
+            20%{
+                top: -90%;
+            }
+            40%{
+                top: -90%;
+            }
+            60%{
+                top: -90%;
+            }
+            80%{
+                top: -90%;
+            }
+            100%{
+                top: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><div class="navBar-div"><p>Thunder Clothes</p> <br><p>About Us</p></div></nav>
+    </header>
+    <main>
+        <div class="title">
+            <h1>About us</h1>
+            <p>know more about thunder comunity</p>
+        </div>
+        <ul><li><h2>What are We ?</h2></li></ul>
+        <p class="text">
+            we are a group of a tunisian people that sits together while drinking and smoking pots, decided to create our own brand after a long discussion and discover that
+            we have such a wide vision and such a creative mind we're not saying that we are perfect,
+            we made mistakes in our journey and made such a miserable designs and clothes <br>
+            and still not satisfied with it becaus what's on our mind is more artistic and more professional.
+            we just don't know where to start and what to start with first our way is a bit blury,
+            but the time is going and we get better and know more about how is it to run a good brand and get such good costumer Like u. <br>
+            learning about designing and searching for a good clothing quality here and there so we can finally gives our costumers the best of the best clothes . 
+            our goal is to make the best quality and a highly proffesional and creative designs for you.
+        </p><br>
+        <ul><li><h2>Mission and Values</h2></li></ul>
+        <p class="text">
+            the purpose of our brand <b>Thunder Clothes</b> is Selling an artistic products and seeing our Good customers wearing our art and walking around with a such a beautifull idas and creativity on theri shirts
+            we want to build a life style and a mindset for the new generation
+        
+        </p>
+        <ul><li><h2>Team Members</h2></li></ul>
+        <ul class="teamNames">
+            <li>Chahine Fehri</li>
+            <li>Aziz Ben Abdallah</li>
+            <li>Mouhamed Korbosli</li>
+            <li>Yassine Fehri</li>
+        </ul>
+        <ul><li><h2>Achievements and Milestones</h2></li></ul>
+        <div class="images">
+            <img class="hidden" src="images/iron-the-clothes.png">
+            <img class="hidden" src="images/thunder-fuckTheSystem-Post.png">
+            <img class="hidden" src="images/TRUST THE PROCESS PORTO.jfif">
+            <img class="hidden" src="images/make-them-mockup.png">
+            <img class="hidden" src="images/thunder-north-africa-collection.png" >
+        </div>
+        <ul><li><h2>Company Culture</h2></li></ul>
+        <p class="text">
+            When we talk about thunder comunity we talk about thunder employees and how our members of organization work and interract with each other <br>
+            while focusing on being creative and being free with your with showing your creativity and art work through Thunder Clothes for our clients. <br>
+            The most important thing between us is Respect and team work with strong friendship
+            Thunder organization have shared belives,purposed and points of view is to be creative and lead thunder in the right way with your ideas and opinions <br>
+            that is important to us and we're interested on the new ideas and art that your mind is capable of. <br>
+            of course we all agree of being respectfull,understandfull,kind and treat your team like a family and be satisfied with working in a team and accept others opinions in your work.
+            and try to understand your team point of view like they understand yours
+        </p>
+        <ul><li><h2>Quotes</h2></li></ul>
+        <p class="text">
+            we want to create and deliver the best quality and art work for our clients. <br>
+            and make you satisfied and happy when we sell you our clothes and products 
+            that makes us feel more motivated to be more creative,providable,artistic for Your satisfaction and we care about how you look . <br>
+            thats why we trie our best to deliver you and artistic product
+        </p>
+        <ul><li><h2>Future Plans</h2></li></ul>
+        <p class="text">
+            we'd like to spread our art work all over the street clothes comunity . <br>
+            thunder clothes want to enter street clothes comunity heart and sell the an artistic product 
+        </p>
+        <ul><li><h2>Social Media</h2></li></ul>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com/thunderclothes.tn" target="_blank"><img src="images/facebook.png"></a>
+            <a href="https://www.instagram.com/thunder_clothes_tn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="images/instagram.png"></a>
+        </nav>
+        <ul><li><h2>Contact Us</h2></li></ul>
+        <form action="https://api.web3forms.com/submit" method="post">
+            <div class="contact-form">
+                <input type="hidden" name="access_key" value="752e1d60-0d0f-4b40-81f9-456eaa0b53fb">
+                <input type="text" name="name" id="name" placeholder="Name" class="input">
+                <input type="email" name="email" id="email" placeholder="Email" class="input">
+                <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="send" class="contact-us-btn">
+            </div>
+        </form>
+    </main>
+
+    <script src="js.js"></script>
+    <script>
+        var closeMoreOptions = document.getElementById('closeMoreOptions');
+        var moreOptions = document.getElementById('moreOptions-container');
+        var moreOptionsOpenBtn = document.getElementById('moreOptions');
+        moreOptionsOpenBtn.addEventListener('click' , function(){
+            moreOptions.style.right = "0%"
+        })
+        closeMoreOptions.addEventListener('click' , function(){
+            moreOptions.style.right = "-100%"
+        })
+    </script>
+</body>
+</html>

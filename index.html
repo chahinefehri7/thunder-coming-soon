@@ -78,7 +78,182 @@
             font-family: Outfit;
             margin: 0 5px;
         }
+        #more{
+            width: 50%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.7s;
+        }
+        #knowMore{
+            padding: 15px 20px;
+            border: none;
+            background-color: #1D1FB8;
+            color: aliceblue;
+            font-family:"josefin sans";
+            border-radius: 50px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+        }
+        #MoreContainer{
+            width: 100%;
+            height: fit-content;
+            margin: 50px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #MoreContainer img{
+            width: 90%;
+            height: auto;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        .heading{
+            width: 100%;
+            height: fit-content;
+            margin: 40px 0;
+        }
+        .heading h1{
+            font-family: "josefin sans";
+            font-size: 60px;
+        }
+        .heading p{
+            font-family: 'outfit';
+            font-size: 18px;
+        }
+        #YourAreDeadMsg{
+            font-family:"Pixelify Sans";
+            font-size: 30px;
+            color: rgb(206, 0, 0);
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            cursor: default;
+            display: none;
+        }
+        .Body{
+            width: 90%;
+            text-align: start;
+            font-family:'Pacifico';
+            font-weight: bolder;
+        }
+        #SeeMoreShirts{
+            width: 100%;
+            height:0;
+            margin: 50px 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #SeeMoreShirts img{
+            width: 90%;
+            height: auto;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        #SeeMoreShirtsBtn{
+            color: gray;
+            text-decoration: underline;
+            font-family: 'prompt';
+            font-weight: 200;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        #Packaging{
+            width: 100%;
+            height: fit-content;
+        }
+        #Packaging nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #Packaging nav img{
+            width: 49%;
+            height: auto;
+            margin: 3px;
+            transition: 0.7s;
+        }
+        #Packaging nav img:nth-child(1){
+            transition: 300ms;
+        }
+        #Packaging nav img:nth-child(2){
+            transition: 600ms;
+        }
+        #Packaging nav img:nth-child(3){
+            transition:350ms;
+        }
+        #Packaging nav img:nth-child(4){
+            transition: 650ms;
+        }
+        #Packaging2{
+            width: 100%;
+            height: fit-content;
+        }
+        #Packaging2 nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #Packaging2 nav img{
+            width: 49%;
+            height: 250px;
+            object-fit: cover;
+            margin: 3px;
+            transition: 0.7s;
+        }
+        #Packaging2 nav img:nth-child(1){
+            transition: 300ms;
+        }
+        #Packaging2 nav img:nth-child(2){
+            transition: 600ms;
+        }
+        #Packaging2 nav img:nth-child(3){
+            transition:350ms;
+        }
+        #Packaging2 nav img:nth-child(4){
+            transition: 650ms;
+        }
+        #logo{
+            width: 50px;
+            height: 50px;
+            position: sticky;
+            top: 50%;
+        }
         @media (max-width:800px) {
+            #Packaging nav img{
+                width: 40%;
+                height: 100px;
+                object-fit: cover;
+                margin: 3px;
+            }
+            #Packaging2 nav img{
+                width: 40%;
+                height: 100px;
+                object-fit: cover;
+                margin: 3px;
+            }
+            #more{
+                width: 95%;
+                padding: 0 2.5%;
+            }
+            #more h1{
+                font-size: 40px;
+            }
+            #YourAreDeadMsg{
+                top: 80%;
+                font-size: 10px;
+            }
             .title{
                 width: 90%;
                 margin:0 5%;
@@ -137,6 +312,7 @@
                     <nav class="current-score"><p id="currentScore">000</p><pre>  PT</pre><pre>  <b>Score :</b></pre></nav>
                 </div>
                 <div class="gray-background" id="gray-background">
+                    <p id="YourAreDeadMsg">You Are Dead</p>
                     <h1 id="play">Click to Start</h1>
                 </div>
                 <img src="images/game-background2.jpg" alt="game background" class="game-background" id="gameBackground">
@@ -156,7 +332,100 @@
             <h1 class="header-title">Thunder Website is Coming Soon</h1>
             <p>Thunder Clothes Selling artistic products</p>
         </div>
-
+        <div id="more">
+            <button id="knowMore">Know More</button>
+            <div id="MoreContainer">
+                <nav class="heading hidden2">
+                    <h1 class="hidden">Welcome to Thnder</h1>
+                    <p class="hidden3">Take a Look to Our Collections</p>
+                </nav>
+                <img src="images/thunder-poster-2024.png" alt="thunder poster" class="hidden">
+                <nav class="heading hidden2">
+                    <h1 class="hidden">What's New</h1>
+                    <p class="hidden3">New cool Stuff</p>
+                </nav>
+                <nav class="Body hidden">
+                    <h4 class="hidden3">Good Health mars</h4>
+                </nav>
+                <img src="images/good health mars.png" alt="good health t-shirt" class="hidden">
+                <nav class="Body hidden">
+                    <h4 class="hidden3">Good Health</h4>
+                </nav>
+                <img src="images/good-health-mockup.png" alt="good health t-shirt" class="hidden">
+                <nav class="Body hidden">
+                    <h4 class="hidden3">Make Them</h4>
+                </nav>
+                <img src="images/make-them-tshirt.png" alt="thunder make the t-shirt" class="hidden">
+                <p id="SeeMoreShirtsBtn">See More</p>
+                <div id="SeeMoreShirts">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Thundr World</h4>
+                    </nav>
+                    <img src="images/thunder-world-mockup.png" alt="thunder world t-shirt" class="hidden">,
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Self Respect</h4>
+                    </nav>
+                    <img src="images/mockup2.png" alt="thunder self respect t-shirt" class="hidden">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Its Lit</h4>
+                    </nav>
+                    <img src="images/mockup.png" alt="thunder its lit t-shirt" class="hidden">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Without a Body</h4>
+                    </nav>
+                    <img src="images/thunder-without-body.png" alt="thunder without a body" class="hidden">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">North Africa</h4>
+                    </nav>
+                    <img src="images/thunder-north-africa-collection.png" alt="thunder North Africa" class="hidden">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Tunisian Art</h4>
+                    </nav>
+                    <img src="images/THUNDER-tunisian-art-mockup.png" alt="thunder Tunisian Art" class="hidden">
+                    <nav class="Body hidden">
+                        <h4 class="hidden3">Stop Giving Away Your Energy</h4>
+                    </nav>
+                    <img src="images/thunder-quotes.png" alt="thunder Stop Giving Away Your Energy" class="hidden">
+                </div>
+                <nav class="heading hidden2">
+                    <h1 class="hidden">Thunder Art</h1>
+                    <p class="hidden3">Selling Artistic Designs</p>
+                </nav>
+                <img src="images/thunderClothes-stayTuned.png"  class="hidden">
+                <img src="images/thunder-secret2 - Copy.png"  class="hidden">
+                <img src="images/good-health-post.png"  class="hidden">
+                <img src="images/musicDisk.png"  class="hidden">
+                <img src="images/m.png"  class="hidden">
+                <img src="images/thunder-smoke.png"  class="hidden">
+                <img src="images/thunder-poster2.png"  class="hidden">
+                <nav class="heading hidden2">
+                    <h1 class="hidden">Thunder Packaging</h1>
+                    <p class="hidden3">we are not just selling an artistic products <br>thunder clothes are making an artistic Packaging for their customers</p>
+                </nav>
+                <div id="Packaging">
+                    <img src="images/box-mockup-thunder-pack.png" class="hidden3" style="width: 100%; height: auto;">
+                    <nav>
+                        <img src="images/box-mockup-thunder-lightBrown.png" alt="light brown box" class="hidden">
+                        <img src="images/box-mockup-thunder-green.png" alt="green box" class="hidden">
+                        <img src="images/box-mockup-thunder.png" alt="reb box" class="hidden">
+                        <img src="images/box-mockup-thunder-purple.png" alt="purple box" class="hidden">
+                    </nav>
+                </div>
+                <div id="Packaging2">
+                    <img src="images/thunder-pack-mockup.png" class="hidden3" style="width: 100%; height: auto;">
+                    <nav>
+                        <img src="images/thunder-pack-mockup2.png" alt="Thunder Pack" class="hidden">
+                        <img src="images/thunder-pack-mockup3.png" alt="Thunder Pack" class="hidden">
+                        <img src="images/thunder-pack-mockup22.png" alt="Thunder Pack" class="hidden">
+                        <img src="images/thunder-pack-mockup-sticker.png" alt="Thunder Pack" class="hidden">
+                    </nav>
+                </div>
+                <a href="aboutus.html"><img src="images/logo.png" alt="logo" id="logo" class="hidden" style="width: 50px; height: 50px; margin: 100px 0;"></a>
+                <a href="aboutus.html"><h2>click here <br> and know more about us</h2></a>
+                
+                
+            </div>
+        </div>
         
     </main>
 
@@ -164,5 +433,36 @@
     <audio src="images/GameOver.mp3" id="GameOver"></audio>
     <audio src="images/GameSong.mp3" id="GameSong1"></audio>
     <script src="game.js"></script>
+    <script src="js.js"></script>
+    <script>
+        var SeeMoreShirtsBtn = document.getElementById('SeeMoreShirtsBtn');
+        var SeeMoreShirts = document.getElementById('SeeMoreShirts');
+        var knowMoreBtn = document.getElementById('knowMore');
+        var moreDiv = document.getElementById('more');
+
+        knowMoreBtn.addEventListener('click' , () =>{
+            if(knowMoreBtn.innerText != "Know Less"){
+                knowMoreBtn.innerText = "Know Less"
+                moreDiv.style.height="10000px";
+                setTimeout(() => {
+                    moreDiv.style.height="fit-content";
+                }, 1000);
+            }else{
+                knowMoreBtn.innerText = "Know More"
+                moreDiv.style.height="50px";
+            }
+        })
+
+        SeeMoreShirtsBtn.addEventListener('click' , ()=>{
+            if(SeeMoreShirts.style.height!="fit-content"){
+                SeeMoreShirtsBtn.innerText = "See Less"
+                SeeMoreShirts.style.height="fit-content"
+            }else{
+                SeeMoreShirtsBtn.innerText = "See More"
+                SeeMoreShirts.style.height="0"
+            }
+        })
+
+    </script>
 </body>
 </html>

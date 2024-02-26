@@ -177,6 +177,55 @@ main{
 .jump-animation-mobile{
     animation: jumpMobile 500ms forwards;
 }
+.hidden{
+    transform: translateY(125px);
+    opacity: 0;
+    filter: blur(4px);
+    transition: all 1s;
+}
+.show{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0px);
+    transition: 0.7s;
+}
+.hidden2{
+    transform: translateY(100px);
+    opacity: 0;
+    filter: blur(4px);
+    transition: 1s;
+}
+.show2{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0px);
+    transition: 0.7s 0.3s;
+}
+.hidden3{
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(4px);
+    transition: 1s;
+}
+.show3{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0px);
+    transition: 0.7s 0.3s;
+}
+.hidden4{
+    transform: translateX(-100px);
+    opacity: 0;
+    filter: blur(4px);
+    transition: 1s 3s;
+}
+.show4{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0px);
+    transition: 1s 2.5s;
+    animation: textAnimationButton 1s 7s forwards;
+}
 @keyframes jump {
     0%{
         bottom:0px;
