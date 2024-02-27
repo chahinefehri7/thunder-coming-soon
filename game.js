@@ -17,9 +17,6 @@ var changeBlock = 0;
 var scoreCounter = 0;
 // intervalDuration
 var blockSpeed = 0;
-let intervalDuration = 4000;
-// blockTime
-var blockTime =3000;
  
 
 function theBlockAnimation(){
@@ -52,6 +49,9 @@ play.addEventListener('click' , function(){
     scoreCounter=0;
     gameBackground.style.filter="unset"
     block.src="images/block.png";
+    let intervalDuration = 3500;
+    // blockTime
+    var blockTime =3000;
     // game over checking 
     GameOver = false;
     if(document.cookie.length != 0){
@@ -81,11 +81,6 @@ play.addEventListener('click' , function(){
         scoreCounter++;
         currentScore.innerText=scoreCounter;
         if(scoreCounter%100==0){
-            if(blockTime>600){
-                blockTime=blockTime-100;
-                // the block duration speed
-                block.style.animationDuration=blockTime+"ms";
-            }
             if(gameBackground.style.filter!="invert()"){
                 gameBackground.style.filter="invert()";
                 block.src = "images/block1.gif";
@@ -94,10 +89,15 @@ play.addEventListener('click' , function(){
                 block.src="images/block.png";
             }
         }
-        if(scoreCounter%500==0){
+        if(scoreCounter%100==0){
+            if(blockTime>600){
+                blockTime=blockTime-100;
+                // the block duration speed
+                block.style.animationDuration=blockTime+"ms";
+            }
             if(intervalDuration>1500){
-                intervalDuration=blockTime*2;
-                changeInterval(intervalDuration);
+                // intervalDuration=(blockTime*2);
+                // changeInterval(intervalDuration);
             }
         }
     }, 100);

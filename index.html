@@ -302,6 +302,21 @@
         .aboutus:hover{
             text-decoration: underline;
         }
+        #CountDown{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 40%;
+            color: #212121;
+            font-family: "josefin sans";
+            margin: 0;
+            margin-top: 3%;
+            font-size: 20px;
+
+        }
+        #CountDown p{
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
@@ -315,6 +330,7 @@
         </div>
     </div>
     <main id="content">
+        <div id="CountDown"><span id="days">00</span><p>Day</p>:<span id="hours">00</span><p>Hour</p>:<span id="minutes">00</span><p>Minute</p>:<span id="seconds">00</span><p>Second</p></div>
         <!-- thunder Game -->
         <div class="game-container">
             <div class="thunderGame">
