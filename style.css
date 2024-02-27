@@ -13,7 +13,7 @@ main{
 .game-container{
     width:100%;
     height: fit-content;
-    margin: 1% 1.25% 5% 1.25%;
+    margin: 0% 1.25% 5% 1.25%;
     margin-bottom: 0px;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ main{
     }
     .game-container{
         justify-content: center;
-        margin-top: 15%;
+        margin-top: 10%;
     }
 }
 .game-background{
